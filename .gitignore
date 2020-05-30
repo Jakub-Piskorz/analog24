@@ -1,0 +1,5 @@
+node_modules
+.eslintrc
+.prettierrc
+style.min.css.map
+style.css.map

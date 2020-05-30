@@ -1,0 +1,18 @@
+{
+  "name": "analog24",
+  "version": "1.0.0",
+  "description": "Personal e-commerce project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "e-commerce"
+  ],
+  "author": "Jakub Piskorz",
+  "license": "ISC",
+  "dependencies": {
+    "create-react-app": "^3.4.1",
+    "prettier": "^2.0.5"
+  }
+}
