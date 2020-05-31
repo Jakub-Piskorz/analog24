@@ -72,7 +72,7 @@ body {
     }
     .login::before {
       content: "";
-      background-image: url("/img/user.png");
+      background-image: url("../img/user.png");
       background-size: cover;
       width: 30px;
       height: 30px;
@@ -81,7 +81,7 @@ body {
     }
     .basket::before {
       content: "";
-      background-image: url("/img/basket.png");
+      background-image: url("../img/basket.png");
       background-size: cover;
       width: 27px;
       height: 27px;
