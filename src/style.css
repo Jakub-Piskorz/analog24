@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Nineteenth";
+  src: url("../fonts/Nineteenth.woff");
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,6 +11,8 @@ body {
   margin: 0;
   padding-top: 75px;
   position: relative;
+  font-family: Nineteenth;
+  font-size: 17px;
 }
 
 .nav {
@@ -30,10 +37,15 @@ body {
 .nav-search {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .nav-search-bar {
-  width: 600px;
+  display: block;
+  position: relative;
+  min-width: 300px;
+  width: 100%;
+  max-width: 1000px;
   height: 40px;
   border: none;
   background-color: white;
@@ -50,12 +62,75 @@ body {
   border-radius: 0 5px 5px 0;
 }
 
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+  margin-right: 20px;
+  height: 100%;
+}
+
+.nav-right-item {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 30px 0 60px;
+  position: relative;
+  font-size: 20px;
+}
+
+.nav-right .login::before {
+  content: "";
+  background-image: url("/img/user.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  left: 15px;
+  position: absolute;
+}
+
+.nav-right .basket::before {
+  content: "";
+  background-image: url("/img/basket.png");
+  background-size: cover;
+  width: 27px;
+  height: 27px;
+  left: 20px;
+  position: absolute;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   width: 1260px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px auto;
   grid-gap: 20px;
+}
+
+.grid-item {
+  grid-column: span 3;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #ececec;
+  border: solid 2px #44345a;
+}
+
+.grid .box {
+  height: 300px;
+}
+
+.grid .header {
+  height: 100px;
+  grid-column: 1/13;
+}
+
+.grid .wide {
+  grid-column: span 6;
+}
+
+.grid .wider {
+  grid-column: span 9;
 }
 /*# sourceMappingURL=style.css.map */
