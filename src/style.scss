@@ -97,8 +97,15 @@ body {
   width: 1260px;
   margin: 20px auto;
   grid-gap: 20px;
+  @media screen and (max-width: 1300px) {
+    width: 800px;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  @media screen and (max-width: 900px) {
+    width: 90%;
+    grid-template-columns: repeat(4, 1fr);
+  }
   &-item {
-    grid-column: span 3;
     border-radius: 5px;
     padding: 20px;
     background-color: rgb(236, 236, 236);
@@ -110,11 +117,26 @@ body {
   .header {
     height: 100px;
     grid-column: 1/13;
+    @media screen and (max-width: 1300px) {
+      grid-column: 1/7;
+    }
+    @media screen and (max-width: 900px) {
+      grid-column: 1/5;
+    }
   }
-  .wide {
-    grid-column: span 6;
-  }
-  .wider {
-    grid-column: span 9;
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      grid-column: span #{$i};
+      @if ($i >= 6) {
+        @media screen and (max-width: 1300px) {
+          grid-column: 1/7;
+        }
+      }
+      @if ($i >= 3) {
+        @media screen and (max-width: 900px) {
+          grid-column: 1/5;
+        }
+      }
+    }
   }
 }
