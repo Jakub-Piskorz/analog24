@@ -132,6 +132,13 @@ body {
   border-radius: 5px;
   text-align: center;
   align-items: center;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.grid .product-card:hover {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.397);
+  transform: translate(-2px, -2px);
 }
 
 .grid .product-card p {
