@@ -23,6 +23,7 @@ body {
   width: 100%;
   height: $nav-h;
   background-color: rgb(29, 18, 53);
+  z-index: 2;
   .logo {
     margin: 0 30px;
     height: 100%;
@@ -106,15 +107,16 @@ body {
     grid-template-columns: repeat(4, 1fr);
   }
   .product-card {
-    padding: 20px 10px;
-    background-color: rgb(248, 248, 250);
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.561);
+    position: relative;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
     text-align: center;
     align-items: center;
     transition: 0.1s;
+    padding: 30px 10px 20px;
+    background-color: rgb(248, 248, 250);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.561);
     cursor: pointer;
     &:hover {
       box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.397);
@@ -123,6 +125,8 @@ body {
     p {
       font-size: 15px;
       margin: 7px 0;
+      height: 32px;
+      overflow: hidden;
     }
     .cena {
       font-size: 25px;
@@ -133,6 +137,18 @@ body {
       width: 100%;
       height: 170px;
       object-fit: contain;
+    }
+    .delivery {
+      font-size: 14px;
+      position: absolute;
+      top: 8px;
+      left: 13px;
+      &.green {
+        color: rgb(46, 179, 41);
+      }
+      &.red {
+        color: rgb(207, 24, 24);
+      }
     }
   }
 }
