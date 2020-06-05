@@ -123,14 +123,42 @@ body {
   }
 }
 
-.grid .box {
+.grid .product-card {
+  padding: 20px 10px;
+  background-color: #f8f8fa;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.561);
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+}
+
+.grid .product-card p {
+  font-size: 15px;
+  margin: 7px 0;
+}
+
+.grid .product-card .cena {
+  font-size: 25px;
+  color: #471553;
+}
+
+.grid .product-card img {
+  display: flex;
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+}
+
+.box {
   height: 300px;
   background-color: #ececec;
   border: solid 2px #44345a;
   border-radius: 5px;
 }
 
-.grid .header {
+.header {
   height: 100px;
   display: flex;
   justify-content: center;
@@ -142,175 +170,163 @@ body {
 }
 
 @media screen and (max-width: 1300px) {
-  .grid .header {
+  .header {
     grid-column: 1/7;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .grid .header {
+  .header {
     grid-column: 1/5;
   }
 }
 
-.grid .col-1 {
+.col-1 {
   grid-column: span 1;
-  padding: 20px;
 }
 
-.grid .col-2 {
+.col-2 {
   grid-column: span 2;
-  padding: 20px;
 }
 
-.grid .col-3 {
+.col-3 {
   grid-column: span 3;
-  padding: 20px;
 }
 
 @media screen and (max-width: 900px) {
-  .grid .col-3 {
+  .col-3 {
     grid-column: 1/5;
   }
 }
 
-.grid .col-4 {
+.col-4 {
   grid-column: span 4;
-  padding: 20px;
 }
 
 @media screen and (max-width: 900px) {
-  .grid .col-4 {
+  .col-4 {
     grid-column: 1/5;
   }
 }
 
-.grid .col-5 {
+.col-5 {
   grid-column: span 5;
-  padding: 20px;
 }
 
 @media screen and (max-width: 900px) {
-  .grid .col-5 {
+  .col-5 {
     grid-column: 1/5;
   }
 }
 
-.grid .col-6 {
+.col-6 {
   grid-column: span 6;
-  padding: 20px;
 }
 
 @media screen and (max-width: 1300px) {
-  .grid .col-6 {
+  .col-6 {
     grid-column: 1/7;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .grid .col-6 {
+  .col-6 {
     grid-column: 1/5;
   }
 }
 
-.grid .col-7 {
+.col-7 {
   grid-column: span 7;
-  padding: 20px;
 }
 
 @media screen and (max-width: 1300px) {
-  .grid .col-7 {
+  .col-7 {
     grid-column: 1/7;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .grid .col-7 {
+  .col-7 {
     grid-column: 1/5;
   }
 }
 
-.grid .col-8 {
+.col-8 {
   grid-column: span 8;
-  padding: 20px;
 }
 
 @media screen and (max-width: 1300px) {
-  .grid .col-8 {
+  .col-8 {
     grid-column: 1/7;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .grid .col-8 {
+  .col-8 {
     grid-column: 1/5;
   }
 }
 
-.grid .col-9 {
+.col-9 {
   grid-column: span 9;
-  padding: 20px;
 }
 
 @media screen and (max-width: 1300px) {
-  .grid .col-9 {
+  .col-9 {
     grid-column: 1/7;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .grid .col-9 {
+  .col-9 {
     grid-column: 1/5;
   }
 }
 
-.grid .col-10 {
+.col-10 {
   grid-column: span 10;
-  padding: 20px;
 }
 
 @media screen and (max-width: 1300px) {
-  .grid .col-10 {
+  .col-10 {
     grid-column: 1/7;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .grid .col-10 {
+  .col-10 {
     grid-column: 1/5;
   }
 }
 
-.grid .col-11 {
+.col-11 {
   grid-column: span 11;
-  padding: 20px;
 }
 
 @media screen and (max-width: 1300px) {
-  .grid .col-11 {
+  .col-11 {
     grid-column: 1/7;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .grid .col-11 {
+  .col-11 {
     grid-column: 1/5;
   }
 }
 
-.grid .col-12 {
+.col-12 {
   grid-column: span 12;
-  padding: 20px;
 }
 
 @media screen and (max-width: 1300px) {
-  .grid .col-12 {
+  .col-12 {
     grid-column: 1/7;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .grid .col-12 {
+  .col-12 {
     grid-column: 1/5;
   }
 }
