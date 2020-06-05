@@ -1,16 +1,19 @@
-$nav-h: 75px;
+$nav-h: 70px;
+$tablet: 1365px;
+$mobile: 900px;
+
 @font-face {
   font-family: "Nineteenth";
   src: url("../fonts/Nineteenth.woff");
 }
 * {
   box-sizing: border-box;
+  font-family: Nineteenth;
 }
 body {
   margin: 0;
   padding-top: $nav-h;
   position: relative;
-  font-family: Nineteenth;
   font-size: 17px;
 }
 .nav {
@@ -24,12 +27,18 @@ body {
   height: $nav-h;
   background-color: rgb(29, 18, 53);
   z-index: 2;
-  .logo {
+  a {
+    display: inline-block;
     margin: 0 30px;
-    height: 100%;
     width: auto;
+    height: 90%;
     user-select: none;
+    .logo {
+      width: auto;
+      height: 100%;
+    }
   }
+
   &-search {
     display: flex;
     flex-direction: row;
@@ -48,7 +57,7 @@ body {
     }
     &-right {
       width: 80px;
-      background-color: #ff2267;
+      background-color: #ff2366;
       border: none;
       color: white;
       height: 40px;
@@ -98,11 +107,11 @@ body {
   width: 1260px;
   margin: 20px auto;
   grid-gap: 20px;
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: $tablet) {
     width: 800px;
     grid-template-columns: repeat(6, 1fr);
   }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: $mobile) {
     width: 90%;
     grid-template-columns: repeat(4, 1fr);
   }
@@ -115,11 +124,13 @@ body {
     align-items: center;
     transition: 0.1s;
     padding: 30px 10px 20px;
-    background-color: rgb(248, 248, 250);
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.561);
+    text-decoration: inherit;
+    color: inherit;
+    background-color: rgb(249, 249, 251);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.527);
     cursor: pointer;
     &:hover {
-      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.397);
+      box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.329);
       transform: translate(-2px, -2px);
     }
     p {
@@ -128,7 +139,7 @@ body {
       height: 32px;
       overflow: hidden;
     }
-    .cena {
+    .price {
       font-size: 25px;
       color: rgb(71, 21, 83);
     }
@@ -147,9 +158,79 @@ body {
         color: rgb(46, 179, 41);
       }
       &.red {
-        color: rgb(207, 24, 24);
+        color: #d41f55;
       }
     }
+  }
+}
+.product-grid {
+  display: grid;
+  width: 1260px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto 600px 90px;
+  grid-template-areas:
+    "t t t t t t t . . . . ."
+    "p p p p p p p r r r r r"
+    "s1 s2 s3 s4 s5 s6 s7 . . . . .";
+  @media screen and (max-width: $tablet) {
+    width: 800px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto 400px 90px;
+    grid-template-areas:
+      "t t t t t t"
+      "p p p p r r"
+      "s1 s2 s3 s4 s5 s6"
+      "s7 . . . . .";
+  }
+  @media screen and (max-width: $mobile) {
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 500px auto 90px 90px 90px;
+    grid-template-areas:
+      "t t t"
+      "p p p"
+      "r r r"
+      "s1 s2 s3"
+      "s4 s5 s6"
+      "s7 . .";
+  }
+  width: 1260px;
+  margin: 20px auto;
+  grid-gap: 20px;
+  .product {
+    grid-area: p;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.527);
+    background-color: rgb(249, 249, 251);
+    border-radius: 5px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: scale-down;
+    }
+  }
+  .product-right {
+    background-color: rgb(249, 249, 251);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.527);
+    border-radius: 5px;
+    grid-area: r;
+  }
+  .product-small {
+    background-color: rgb(249, 249, 251);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.527);
+    border-radius: 5px;
+    @for $i from 1 through 9 {
+      &#{$i} {
+        grid-area: s#{$i};
+        background-color: rgb(249, 249, 251);
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.527);
+        border-radius: 5px;
+      }
+    }
+  }
+  .title {
+    font-size: 20px;
+    font-weight: 900;
+    grid-area: t;
   }
 }
 .box {
@@ -167,10 +248,10 @@ body {
   left: 0;
   border-radius: 5px;
   top: 0;
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: $tablet) {
     grid-column: 1/7;
   }
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: $mobile) {
     grid-column: 1/5;
   }
 }
@@ -178,7 +259,7 @@ body {
   .col-#{$i} {
     grid-column: span #{$i};
     @if ($i >= 6) {
-      @media screen and (max-width: 1300px) {
+      @media screen and (max-width: $tablet) {
         grid-column: 1/7;
       }
     }
