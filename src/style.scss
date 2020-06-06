@@ -38,7 +38,22 @@ a {
     color: rgb(90, 61, 223);
   }
 }
-
+.green {
+  color: rgb(46, 179, 41);
+}
+.button-red {
+  display: inline-block;
+  padding: 15px 20px;
+  background-color: #ff2366;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  margin: 10px 10px 10px 0;
+  &:hover {
+    color: white;
+    background-color: #ca2355;
+  }
+}
 * {
   box-sizing: border-box;
   font-family: Nineteenth;
@@ -192,9 +207,6 @@ body {
       position: absolute;
       top: 8px;
       left: 13px;
-      &.green {
-        color: rgb(46, 179, 41);
-      }
       &.red {
         color: #d41f55;
       }
@@ -248,13 +260,16 @@ body {
     }
   }
   .product-right {
-    padding: 25px;
+    padding: 25px 25px 25px 5%;
     background-color: rgb(249, 249, 251);
     display: flex;
     flex-direction: column;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.527);
     border-radius: 5px;
     grid-area: r;
+    @media screen and (max-width: $mobile) {
+      justify-content: center;
+    }
     .category {
       font-size: 18px;
       margin-bottom: 20px;
@@ -266,6 +281,7 @@ body {
       font-size: 50px;
     }
     .features {
+      margin: 15px 0;
       & > ul {
         padding-left: 18px;
       }
