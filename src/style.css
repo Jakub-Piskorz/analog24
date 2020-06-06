@@ -3,6 +3,46 @@
   src: url("../fonts/Nineteenth.woff");
 }
 
+@font-face {
+  font-family: "Quicksand Bold";
+  src: url("../fonts/Quicksand-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Quicksand Light";
+  src: url("../fonts/Quicksand-Light.ttf");
+}
+
+@font-face {
+  font-family: "Quicksand Medium";
+  src: url("../fonts/Quicksand-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Quicksand Regular";
+  src: url("../fonts/Quicksand-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Quicksand SemiBold";
+  src: url("../fonts/Quicksand-SemiBold.ttf");
+}
+
+h2 {
+  font-family: "Quicksand Light";
+  letter-spacing: 0.5px;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: inherit;
+  transition: 0.1s;
+}
+
+a:hover {
+  color: #5a3ddf;
+}
+
 * {
   box-sizing: border-box;
   font-family: Nineteenth;
@@ -151,11 +191,17 @@ body {
   transform: translate(-2px, -2px);
 }
 
-.grid .product-card p {
-  font-size: 15px;
-  margin: 7px 0;
+.grid .product-card-title {
+  margin: 20px 0;
   height: 32px;
   overflow: hidden;
+  display: inline-flex;
+  align-content: center;
+  align-items: center;
+}
+
+.grid .product-card-title p {
+  font-size: 17px;
 }
 
 .grid .product-card .price {
@@ -190,7 +236,7 @@ body {
   width: 1260px;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto 600px 90px;
-  grid-template-areas: "t t t t t t t . . . . ." "p p p p p p p r r r r r" "s1 s2 s3 s4 s5 s6 s7 . . . . .";
+  grid-template-areas: "t t t t t t t t t t t t" "p p p p p p p r r r r r" "s1 s2 s3 s4 s5 s6 s7 . . . . .";
   width: 1260px;
   margin: 20px auto;
   grid-gap: 20px;
@@ -198,9 +244,10 @@ body {
 
 @media screen and (max-width: 1365px) {
   .product-grid {
-    width: 800px;
+    width: 1000px;
+    max-width: 90%;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto 400px 90px;
+    grid-template-rows: auto 600px 90px;
     grid-template-areas: "t t t t t t" "p p p p r r" "s1 s2 s3 s4 s5 s6" "s7 . . . . .";
   }
 }
@@ -209,7 +256,7 @@ body {
   .product-grid {
     width: 90%;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 500px auto 90px 90px 90px;
+    grid-template-rows: auto 400px auto 90px 90px 90px;
     grid-template-areas: "t t t" "p p p" "r r r" "s1 s2 s3" "s4 s5 s6" "s7 . .";
   }
 }
@@ -228,16 +275,34 @@ body {
 }
 
 .product-grid .product-right {
+  padding: 25px;
   background-color: #f9f9fb;
+  display: flex;
+  flex-direction: column;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.527);
   border-radius: 5px;
   grid-area: r;
 }
 
-.product-grid .product-small {
-  background-color: #f9f9fb;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.527);
-  border-radius: 5px;
+.product-grid .product-right .category {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.product-grid .product-right .price {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 50px;
+}
+
+.product-grid .product-right .features > ul {
+  padding-left: 18px;
+}
+
+.product-grid .product-right .features > ul > li {
+  font-family: "Quicksand Medium";
+  margin: 6px 0;
 }
 
 .product-grid .product-small1 {
@@ -304,9 +369,16 @@ body {
 }
 
 .product-grid .title {
-  font-size: 20px;
-  font-weight: 900;
   grid-area: t;
+}
+
+.product-grid .title h1 {
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+.product-grid .title h2 {
+  margin: 5px 0 15px;
 }
 
 .box {
