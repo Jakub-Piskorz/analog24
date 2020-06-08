@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import ProductPage from "./App";
 import * as serviceWorker from "./serviceWorker";
 import logo from "./img/logo.png";
 
@@ -21,7 +21,7 @@ ReactDOM.render(
         <div className="nav-right-item login">Zaloguj</div>
       </div>
     </nav>
-    <App />
+    <ProductPage pics="./img" />
   </React.StrictMode>,
   document.getElementById("root")
 );

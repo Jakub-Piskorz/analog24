@@ -151,7 +151,7 @@ body {
 
 .nav-right .login::before {
   content: "";
-  background-image: url("img/user.png");
+  background-image: url("/img/user.png");
   background-size: cover;
   width: 30px;
   height: 30px;
@@ -161,7 +161,7 @@ body {
 
 .nav-right .basket::before {
   content: "";
-  background-image: url("img/basket.png");
+  background-image: url("/img/basket.png");
   background-size: cover;
   width: 27px;
   height: 27px;
@@ -253,10 +253,7 @@ body {
   width: 1260px;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto 600px 90px;
-  grid-template-areas:
-    "t t t t t t t t t t t t"
-    "p p p p p p p r r r r r"
-    "s1 s2 s3 s4 s5 s6 s7 . . . . .";
+  grid-template-areas: "t t t t t t t t t t t t" "p p p p p p p r r r r r" "s1 s2 s3 s4 s5 s6 s7 . . . . .";
   width: 1260px;
   margin: 20px auto;
   grid-gap: 20px;
@@ -268,11 +265,7 @@ body {
     max-width: 90%;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto 600px 90px;
-    grid-template-areas:
-      "t t t t t t"
-      "p p p p r r"
-      "s1 s2 s3 s4 s5 s6"
-      "s7 . . . . .";
+    grid-template-areas: "t t t t t t" "p p p p r r" "s1 s2 s3 s4 s5 s6" "s7 . . . . .";
   }
 }
 
@@ -281,13 +274,7 @@ body {
     width: 90%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto 400px 90px 90px 90px auto;
-    grid-template-areas:
-      "t t t"
-      "p p p"
-      "s1 s2 s3"
-      "s4 s5 s6"
-      "s7 . ."
-      "r r r";
+    grid-template-areas: "t t t" "p p p" "s1 s2 s3" "s4 s5 s6" "s7 . ." "r r r";
   }
 }
 

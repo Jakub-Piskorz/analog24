@@ -1,102 +1,64 @@
 import React from "react";
 import "./App.css";
 import logo from "./img/logo.png";
+import SetPic from "./SetPic";
 
-function App({ name = "", logo = "" }) {
+const ProductPage = (props) => {
   return (
-    <div className="grid">
-      <div className="header">
-        <img src="img/deal.jpg" title="Deal Zone" alt="Deal Zone" />
+    <div className="product-grid">
+      <div className="title">
+        <h1>Komórka Nokia 3310 rocznik 2015</h1>
+        <h2>Jakiś podtytuł</h2>
       </div>
-      <a className="col-2 product-card" href="card.html">
-        <div className="delivery">1-3 dni</div>
-        <img src="img/nokia3310.png" alt="" />
-        <div className="product-card-title">
-          <p>Komórka Nokia 3310 rocznik 2015</p>
+      <section className="product">
+        <img src={require(props.pics+"/pic.png")} />
+      </section>
+      <div className="product-small1 img"><img src={require(props.pics+"/pic.png")} onClick={SetPic} /></div>
+      <div className="product-small2 img"><img src={require(props.pics+"/picsmall-1.jpg")} onClick={SetPic} /></div>
+      <div className="product-small3 img"><img src={require(props.pics+"/picsmall-2.png")} onClick={SetPic} /></div>
+      <div className="product-small4 img"><img src={require(props.pics+"/picsmall-3.jpg")} onClick={SetPic} /></div>
+      <div className="product-small5 img"><img src={require(props.pics+"/picsmall-4.jpg")} onClick={SetPic} /></div>
+      <div className="product-small6 img"><img src={require(props.pics+"/picsmall-5.jpg")} onClick={SetPic} /></div>
+      <div className="product-small7 img"><img src={require(props.pics+"/picsmall-6.jpg")} onClick={SetPic} /></div>
+      <section className="product-right">
+        <div className="category">
+          <a href="index.html">Elektronika</a>
+          >
+          <a href="index.html">Telefony</a>
         </div>
-        <div className="price">300 zł</div>
-      </a>
-      <a className="col-2 product-card" href="card.html">
-        <div className="delivery green">24h</div>
-        <img src="img/nokia3310.png" alt="" />
-        <div className="product-card-title">
-          <p>Komórka Nokia 3310 rocznik 2015</p>
+        <div className="price">
+          300 zł
         </div>
-        <div className="price">300 zł</div>
-      </a>
-      <a className="col-2 product-card" href="card.html">
-        <div className="delivery red">Niedostępny</div>
-        <img src="img/nokia3310.png" alt="" />
-        <div className="product-card-title">
-          <p>Komórka Nokia 3310 rocznik 2015</p>
+        <div className="delivery green">1-3 dni</div>
+        <div className="features">
+          <ul>
+            <li>Klasyczny telefon</li>
+            <li>Przynazny dla starszych osób</li>
+            <li>Czas pracy baterii: 7 dni</li>
+            <li>Styl: Retro</li>
+            <li>Wytrzymałość: Trwardszy niż diament</li>
+            <li>Popularność: Wysoki sentyment</li>
+          </ul>
         </div>
-        <div className="price">300 zł</div>
-      </a>
-      <a className="col-2 product-card" href="card.html">
-        <div className="delivery green">24h</div>
-        <img src="img/nokia3310.png" alt="" />
-        <div className="product-card-title">
-          <p>Komórka Nokia 3310 rocznik 2015</p>
+        <div className="product-buttons">
+          <a href="#" className="button-red">Kup teraz</a>
         </div>
-        <div className="price">300 zł</div>
-      </a>
-      <a className="col-2 product-card" href="card.html">
-        <div className="delivery green">24h</div>
-        <img src="img/nokia3310.png" alt="" />
-        <div className="product-card-title">
-          <p>Komórka Nokia 3310 rocznik 2015</p>
-        </div>
-        <div className="price">300 zł</div>
-      </a>
-      <a className="col-2 product-card" href="card.html">
-        <div className="delivery green">24h</div>
-        <img src="img/nokia3310.png" alt="" />
-        <div className="product-card-title">
-          <p>Komórka Nokia 3310 rocznik 2015</p>
-        </div>
-        <div className="price">300 zł</div>
-      </a>
-      <div className="header">
-        <img src="img/deal.jpg" title="Deal Zone" alt="Deal Zone" />
-      </div>
-      <a className="col-3 product-card" href="card.html">
-        <div className="delivery green">24h</div>
-        <img src="img/nokia3310.png" alt="" />
-        <div className="product-card-title">
-          <p>Komórka Nokia 3310 rocznik 2015</p>
-        </div>
-        <div className="price">300 zł</div>
-      </a>
-      <a className="col-3 product-card" href="card.html">
-        <div className="delivery green">24h</div>
-        <img src="img/nokia3310.png" alt="" />
-        <div className="product-card-title">
-          <p>Komórka Nokia 3310 rocznik 2015</p>
-        </div>
-        <div className="price">300 zł</div>
-      </a>
-      <a className="col-3 product-card" href="card.html">
-        <div className="delivery green">24h</div>
-        <img src="img/nokia3310.png" alt="" />
-        <div className="product-card-title">
-          <p>Komórka Nokia 3310 rocznik 2015</p>
-        </div>
-        <div className="price">300 zł</div>
-      </a>
-      <a className="col-3 product-card" href="card.html">
-        <div className="delivery green">24h</div>
-        <img src="img/nokia3310.png" alt="" />
-        <div className="product-card-title">
-          <p>Komórka Nokia 3310 rocznik 2015</p>
-        </div>
-        <div className="price">300 zł</div>
-      </a>
-      <div className="box col-6">Hasło</div>
-      <div className="box col-6">Hasło</div>
-      <div className="box col-6">Hasło</div>
-      <div className="box col-6">Hasło</div>
+      </section>
+      {console.log(props.pics + "/nokia.png")}
+      <script>
+      document.querySelector(".product-small2 a").addEventListener("click", SetPic);
+      </script>
+        {/* {document.querySelector(".product-small1 a").addEventListener("click", SetPic)}
+        {document.querySelector(".product-small2 a").addEventListener("click", SetPic)}
+        {document.querySelector(".product-small3 a").addEventListener("click", SetPic)}
+        {document.querySelector(".product-small4 a").addEventListener("click", SetPic)}
+        {document.querySelector(".product-small5 a").addEventListener("click", SetPic)}
+        {document.querySelector(".product-small6 a").addEventListener("click", SetPic)}
+        {document.querySelector(".product-small7 a").addEventListener("click", SetPic)} */}
     </div>
+    
   );
+  
 }
 
-export default App;
+export default ProductPage;
